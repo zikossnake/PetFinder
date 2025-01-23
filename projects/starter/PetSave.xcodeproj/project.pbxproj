@@ -58,6 +58,12 @@
 		AE6A381C269B5DF20054C842 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A381B269B5DF20054C842 /* Size.swift */; };
 		AE6A3822269B5E1A0054C842 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A3821269B5E1A0054C842 /* Organization.swift */; };
 		AE6A3825269FC7670054C842 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A3824269FC7670054C842 /* User.swift */; };
+		EC2128E72D422DAD005A8AD5 /* AnimalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2128E62D422DAD005A8AD5 /* AnimalRequest.swift */; };
+		EC2128E92D42429B005A8AD5 /* AnimalsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2128E82D42429B005A8AD5 /* AnimalsContainer.swift */; };
+		EC2128F02D4255A2005A8AD5 /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2128EF2D4255A2005A8AD5 /* APIManagerMock.swift */; };
+		EC2128F22D4257D3005A8AD5 /* AccessTokenTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2128F12D4257D3005A8AD5 /* AccessTokenTestHelper.swift */; };
+		EC2128F42D427BDD005A8AD5 /* AnimalsRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2128F32D427BDD005A8AD5 /* AnimalsRequestMock.swift */; };
+		EC2128F62D427E02005A8AD5 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2128F52D427E02005A8AD5 /* RequestManagerTests.swift */; };
 		EC2FFB082D4161150064C5A1 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FFB072D4161150064C5A1 /* RequestProtocol.swift */; };
 		EC2FFB0A2D4161A80064C5A1 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FFB092D4161A80064C5A1 /* RequestType.swift */; };
 		EC2FFB0C2D4168AD0064C5A1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FFB0B2D4168AD0064C5A1 /* APIManager.swift */; };
@@ -138,6 +144,12 @@
 		AE6A3821269B5E1A0054C842 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		AE6A3824269FC7670054C842 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AED3FC3326A863A2006D2BEE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EC2128E62D422DAD005A8AD5 /* AnimalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalRequest.swift; sourceTree = "<group>"; };
+		EC2128E82D42429B005A8AD5 /* AnimalsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsContainer.swift; sourceTree = "<group>"; };
+		EC2128EF2D4255A2005A8AD5 /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
+		EC2128F12D4257D3005A8AD5 /* AccessTokenTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenTestHelper.swift; sourceTree = "<group>"; };
+		EC2128F32D427BDD005A8AD5 /* AnimalsRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRequestMock.swift; sourceTree = "<group>"; };
+		EC2128F52D427E02005A8AD5 /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
 		EC2FFB072D4161150064C5A1 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		EC2FFB092D4161A80064C5A1 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		EC2FFB0B2D4168AD0064C5A1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -286,6 +298,7 @@
 		AE5EA14526AC9AE300895E34 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				EC2128EA2D425562005A8AD5 /* Core */,
 				8F4ADF5226EA4B7100F3CAA5 /* PetSaveTests.swift */,
 			);
 			path = Tests;
@@ -423,6 +436,7 @@
 				8FDD2CA226B311AC00DBE33F /* Pagination.swift */,
 				847F49F726D3614E00B94FB8 /* Animal.swift */,
 				847F49F926D3621C00B94FB8 /* AnimalMock.swift */,
+				EC2128E82D42429B005A8AD5 /* AnimalsContainer.swift */,
 			);
 			path = animal;
 			sourceTree = "<group>";
@@ -459,9 +473,61 @@
 			path = user;
 			sourceTree = "<group>";
 		};
+		EC2128E52D422D9F005A8AD5 /* animals */ = {
+			isa = PBXGroup;
+			children = (
+				EC2128E62D422DAD005A8AD5 /* AnimalRequest.swift */,
+			);
+			path = animals;
+			sourceTree = "<group>";
+		};
+		EC2128EA2D425562005A8AD5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EC2128EB2D425569005A8AD5 /* data */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EC2128EB2D425569005A8AD5 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				EC2128EC2D425572005A8AD5 /* api */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		EC2128EC2D425572005A8AD5 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				EC2128EE2D425589005A8AD5 /* helper */,
+				EC2128ED2D42557F005A8AD5 /* mock */,
+				EC2128F52D427E02005A8AD5 /* RequestManagerTests.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		EC2128ED2D42557F005A8AD5 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				EC2128EF2D4255A2005A8AD5 /* APIManagerMock.swift */,
+				EC2128F32D427BDD005A8AD5 /* AnimalsRequestMock.swift */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
+		EC2128EE2D425589005A8AD5 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				EC2128F12D4257D3005A8AD5 /* AccessTokenTestHelper.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
 		EC2FFB062D4160FF0064C5A1 /* request */ = {
 			isa = PBXGroup;
 			children = (
+				EC2128E52D422D9F005A8AD5 /* animals */,
 				EC2FFB0F2D41719F0064C5A1 /* auth */,
 				EC2FFB072D4161150064C5A1 /* RequestProtocol.swift */,
 				EC2FFB092D4161A80064C5A1 /* RequestType.swift */,
@@ -665,12 +731,14 @@
 				84B0507226B0E3C300E0A709 /* AnimalContactsView.swift in Sources */,
 				8F1DFB6C2708CA2A00F35D07 /* NetworkError.swift in Sources */,
 				AE6A3786269B58350054C842 /* AnimalDetailsView.swift in Sources */,
+				EC2128E92D42429B005A8AD5 /* AnimalsContainer.swift in Sources */,
 				84A59F7E269E9BDB00237A83 /* AdoptionStatus.swift in Sources */,
 				847F49F826D3614E00B94FB8 /* Animal.swift in Sources */,
 				AE6A3816269B5DCD0054C842 /* Gender.swift in Sources */,
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
 				8472DFAB26BF66EF000FEDAF /* LocationManager.swift in Sources */,
 				AE6A3822269B5E1A0054C842 /* Organization.swift in Sources */,
+				EC2128E72D422DAD005A8AD5 /* AnimalRequest.swift in Sources */,
 				8F1DFB6F2708CA5100F35D07 /* DataParser.swift in Sources */,
 				84A59F7A269E920300237A83 /* AnimalEnvironment.swift in Sources */,
 				847F49FA26D3621C00B94FB8 /* AnimalMock.swift in Sources */,
@@ -694,7 +762,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2128F22D4257D3005A8AD5 /* AccessTokenTestHelper.swift in Sources */,
+				EC2128F62D427E02005A8AD5 /* RequestManagerTests.swift in Sources */,
+				EC2128F02D4255A2005A8AD5 /* APIManagerMock.swift in Sources */,
 				8F4ADF5326EA4B7100F3CAA5 /* PetSaveTests.swift in Sources */,
+				EC2128F42D427BDD005A8AD5 /* AnimalsRequestMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

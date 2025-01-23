@@ -32,34 +32,43 @@
 
 import Foundation
 
-protocol RequestManagerProtocol {
-  func perform<T: Decodable>(_ request: RequestProtocol) async throws -> T
-}
-
-class RequestManager: RequestManagerProtocol {
-  let apiManager: APIManagerProtocol
-  let parser: DataParserProtocol
-  let accessTokenManager: AccessTokenManagerProtocol
+enum AnimalRequest: RequestProtocol {
+  case getAnimalsWith(page: Int, latitude: Double?, longitude: Double?)
+  case getAnimalsBy(name: String, age: String?, type: String?)
   
-  init(apiManager: APIManagerProtocol = APIManager(), parser: DataParserProtocol = DataParser(), accessTokenManager: AccessTokenManager = AccessTokenManager()) {
-    self.apiManager = apiManager
-    self.parser = parser
-    self.accessTokenManager = accessTokenManager
+  var path: String {
+    "/v2/animals"
   }
   
-  func perform<T>(_ request: any RequestProtocol) async throws -> T where T : Decodable {
-    let authToken = try await requestAccessToken()
-    let data = try await apiManager.perform(request, authToken: authToken)
-    let decoded: T = try parser.parse(data: data)
-    return decoded
-  }
-  
-  func requestAccessToken() async throws -> String {
-    if accessTokenManager.isTokenValid() {
-      return accessTokenManager.fetchToken()
+  var urlParams: [String : String?] {
+    switch self {
+    case let .getAnimalsWith(page, latitude, longitude):
+      var params = ["page": String(page)]
+      if let latitude = latitude {
+        params["latitude"] = latitude.description
+      }
+      if let longitude = longitude {
+        params["longitude"] = longitude.description
+      }
+      params["sort"] = "random"
+      return params
+    case let .getAnimalsBy(name, age, type):
+      var params: [String: String?] = [:]
+      if !name.isEmpty {
+        params["name"] = name
+      }
+      if let age = age {
+        params["age"] = age
+      }
+      if let type = type {
+        params["type"] = type
+      }
+      return params
     }
-    let data = try await apiManager.requestToken()
-    let token: APIToken = try parser.parse(data: data)
-    return token.bearerAccessToken
   }
+  
+  var requestType: RequestType {
+    .GET
+  }
+  
 }

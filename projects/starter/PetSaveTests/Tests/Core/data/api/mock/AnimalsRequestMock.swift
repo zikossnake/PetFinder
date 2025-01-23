@@ -31,35 +31,18 @@
 /// THE SOFTWARE.
 
 import Foundation
+@testable import PetSave
 
-protocol RequestManagerProtocol {
-  func perform<T: Decodable>(_ request: RequestProtocol) async throws -> T
-}
-
-class RequestManager: RequestManagerProtocol {
-  let apiManager: APIManagerProtocol
-  let parser: DataParserProtocol
-  let accessTokenManager: AccessTokenManagerProtocol
+enum AnimalsRequestMock: RequestProtocol {
+  case getAnimals
   
-  init(apiManager: APIManagerProtocol = APIManager(), parser: DataParserProtocol = DataParser(), accessTokenManager: AccessTokenManager = AccessTokenManager()) {
-    self.apiManager = apiManager
-    self.parser = parser
-    self.accessTokenManager = accessTokenManager
+  var requestType: RequestType {
+    return .GET
   }
   
-  func perform<T>(_ request: any RequestProtocol) async throws -> T where T : Decodable {
-    let authToken = try await requestAccessToken()
-    let data = try await apiManager.perform(request, authToken: authToken)
-    let decoded: T = try parser.parse(data: data)
-    return decoded
+  var path: String {
+    guard let path = Bundle.main.path(forResource: "AnimalsMock", ofType: "json") else { return "" }
+    return path
   }
   
-  func requestAccessToken() async throws -> String {
-    if accessTokenManager.isTokenValid() {
-      return accessTokenManager.fetchToken()
-    }
-    let data = try await apiManager.requestToken()
-    let token: APIToken = try parser.parse(data: data)
-    return token.bearerAccessToken
-  }
 }

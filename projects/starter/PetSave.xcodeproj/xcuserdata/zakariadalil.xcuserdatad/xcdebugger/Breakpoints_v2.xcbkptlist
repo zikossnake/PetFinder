@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1B108464-E51A-4146-9929-48C5C7D78D74"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB79B281-CC24-4BA3-9767-49BE1D996EE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PetSaveTests/Tests/Core/data/api/RequestManagerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "testRequestAnimals()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CB79B281-CC24-4BA3-9767-49BE1D996EE8 - d783429d909410c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PetSaveTests.RequestManagerTests.testRequestAnimals() async throws -&gt; ()"
+                  moduleName = "PetSaveTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zakariadalil/Git/PetFinder/projects/starter/PetSaveTests/Tests/Core/data/api/RequestManagerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50">
+               </Location>
+               <Location
+                  uuid = "CB79B281-CC24-4BA3-9767-49BE1D996EE8 - 44a903335535483f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for PetSaveTests.RequestManagerTests.testRequestAnimals() async throws -&gt; ()"
+                  moduleName = "PetSaveTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zakariadalil/Git/PetFinder/projects/starter/PetSaveTests/Tests/Core/data/api/RequestManagerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50">
+               </Location>
+               <Location
+                  uuid = "CB79B281-CC24-4BA3-9767-49BE1D996EE8 - 3a2fe953baad5cc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PetSaveTests.RequestManagerTests.testRequestAnimals() async throws -&gt; ()"
+                  moduleName = "PetSaveTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zakariadalil/Git/PetFinder/projects/starter/PetSaveTests/Tests/Core/data/api/RequestManagerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50">
+               </Location>
+               <Location
+                  uuid = "CB79B281-CC24-4BA3-9767-49BE1D996EE8 - a865c40cb1d6fac1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for PetSaveTests.RequestManagerTests.testRequestAnimals() async throws -&gt; ()"
+                  moduleName = "PetSaveTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zakariadalil/Git/PetFinder/projects/starter/PetSaveTests/Tests/Core/data/api/RequestManagerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50">
+               </Location>
+               <Location
+                  uuid = "CB79B281-CC24-4BA3-9767-49BE1D996EE8 - a865c40cb1d6fac1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for PetSaveTests.RequestManagerTests.testRequestAnimals() async throws -&gt; ()"
+                  moduleName = "PetSaveTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zakariadalil/Git/PetFinder/projects/starter/PetSaveTests/Tests/Core/data/api/RequestManagerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

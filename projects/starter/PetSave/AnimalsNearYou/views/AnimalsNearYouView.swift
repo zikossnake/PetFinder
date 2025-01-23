@@ -35,12 +35,35 @@ import SwiftUI
 struct AnimalsNearYouView: View {
   @State var animals: [Animal] = []
   @State var isLoading = true
-
+  private let requestmanager: RequestManager = RequestManager()
+  
   var body: some View {
     NavigationView {
-      Text("TODO: Animals Near You View")
-        .navigationTitle("Animals near you")
-    }.navigationViewStyle(StackNavigationViewStyle())
+      List {
+        ForEach(animals) { animal in
+          AnimalRow(animal: animal)
+        }
+      }
+      .task {
+        await fetchAnimals()
+      }
+      .listStyle(.plain)
+      .navigationTitle("Animals near you")
+      .overlay {
+        if isLoading {
+          ProgressView("Finding animals near you...")
+        }
+      }
+    }
+    .navigationViewStyle(.stack)
+  }
+  
+  func fetchAnimals() async {
+    do {
+      let animalsContainer: AnimalsContainer = try await requestmanager.perform(AnimalRequest.getAnimalsWith(page: 1, latitude: nil, longitude: nil))
+      self.animals = animalsContainer.animals
+      await stopLoading()
+    } catch {}
   }
 
   @MainActor

@@ -29,37 +29,15 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
-
 import Foundation
+@testable import PetSave
 
-protocol RequestManagerProtocol {
-  func perform<T: Decodable>(_ request: RequestProtocol) async throws -> T
-}
-
-class RequestManager: RequestManagerProtocol {
-  let apiManager: APIManagerProtocol
-  let parser: DataParserProtocol
-  let accessTokenManager: AccessTokenManagerProtocol
-  
-  init(apiManager: APIManagerProtocol = APIManager(), parser: DataParserProtocol = DataParser(), accessTokenManager: AccessTokenManager = AccessTokenManager()) {
-    self.apiManager = apiManager
-    self.parser = parser
-    self.accessTokenManager = accessTokenManager
+struct APIManagerMock: APIManagerProtocol {
+  func perform(_ request: any RequestProtocol, authToken: String) async throws -> Data {
+    return try Data(contentsOf: URL(fileURLWithPath: request.path), options: .mappedIfSafe)
   }
   
-  func perform<T>(_ request: any RequestProtocol) async throws -> T where T : Decodable {
-    let authToken = try await requestAccessToken()
-    let data = try await apiManager.perform(request, authToken: authToken)
-    let decoded: T = try parser.parse(data: data)
-    return decoded
-  }
-  
-  func requestAccessToken() async throws -> String {
-    if accessTokenManager.isTokenValid() {
-      return accessTokenManager.fetchToken()
-    }
-    let data = try await apiManager.requestToken()
-    let token: APIToken = try parser.parse(data: data)
-    return token.bearerAccessToken
+  func requestToken() async throws -> Data {
+    Data(AccessTokenTestHelper.generateValidToken().utf8)
   }
 }
