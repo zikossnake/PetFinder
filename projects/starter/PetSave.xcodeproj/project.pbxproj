@@ -64,6 +64,7 @@
 		EC2128F22D4257D3005A8AD5 /* AccessTokenTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2128F12D4257D3005A8AD5 /* AccessTokenTestHelper.swift */; };
 		EC2128F42D427BDD005A8AD5 /* AnimalsRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2128F32D427BDD005A8AD5 /* AnimalsRequestMock.swift */; };
 		EC2128F62D427E02005A8AD5 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2128F52D427E02005A8AD5 /* RequestManagerTests.swift */; };
+		EC2128F82D43E22D005A8AD5 /* AccessTokenManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2128F72D43E22D005A8AD5 /* AccessTokenManagerTests.swift */; };
 		EC2FFB082D4161150064C5A1 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FFB072D4161150064C5A1 /* RequestProtocol.swift */; };
 		EC2FFB0A2D4161A80064C5A1 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FFB092D4161A80064C5A1 /* RequestType.swift */; };
 		EC2FFB0C2D4168AD0064C5A1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FFB0B2D4168AD0064C5A1 /* APIManager.swift */; };
@@ -150,6 +151,7 @@
 		EC2128F12D4257D3005A8AD5 /* AccessTokenTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenTestHelper.swift; sourceTree = "<group>"; };
 		EC2128F32D427BDD005A8AD5 /* AnimalsRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRequestMock.swift; sourceTree = "<group>"; };
 		EC2128F52D427E02005A8AD5 /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
+		EC2128F72D43E22D005A8AD5 /* AccessTokenManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManagerTests.swift; sourceTree = "<group>"; };
 		EC2FFB072D4161150064C5A1 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		EC2FFB092D4161A80064C5A1 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		EC2FFB0B2D4168AD0064C5A1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -503,6 +505,7 @@
 				EC2128EE2D425589005A8AD5 /* helper */,
 				EC2128ED2D42557F005A8AD5 /* mock */,
 				EC2128F52D427E02005A8AD5 /* RequestManagerTests.swift */,
+				EC2128F72D43E22D005A8AD5 /* AccessTokenManagerTests.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -763,6 +766,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC2128F22D4257D3005A8AD5 /* AccessTokenTestHelper.swift in Sources */,
+				EC2128F82D43E22D005A8AD5 /* AccessTokenManagerTests.swift in Sources */,
 				EC2128F62D427E02005A8AD5 /* RequestManagerTests.swift in Sources */,
 				EC2128F02D4255A2005A8AD5 /* APIManagerMock.swift in Sources */,
 				8F4ADF5326EA4B7100F3CAA5 /* PetSaveTests.swift in Sources */,

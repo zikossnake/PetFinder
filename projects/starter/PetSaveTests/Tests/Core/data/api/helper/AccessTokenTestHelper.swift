@@ -48,7 +48,7 @@ enum AccessTokenTestHelper {
         {
           "token_type": "Bearer",
           "expires_in": 10,
-          "access_token": \"\(randomString())\
+          "access_token": \"\(randomString())\"
         }
     """
   }
